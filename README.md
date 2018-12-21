@@ -5,15 +5,15 @@
  - 사용자의 아이디와 비번으로 로그인을 할 수 있어야 합니다.
    - 아이디: user, 패스워드: password
  - 단, 사용자 데이터는 애플리케이션 실행 시점에 생성합니다.
-   - [참고](https://github.com/boojm/local-search-test/blob/f10bc30de876f82e8f74383b27a837b234152777/src/main/java/boojongmin/localsearch/Application.java#L20)
+   - [참고](https://github.com/boojm/local-search-test/blob/50a6cebcc72140a85ea8450f1b32efc5d907a5df/src/main/java/boojongmin/localsearch/Application.java#L20)
 1. 장소검색
-  - [Controller](https://github.com/boojm/local-search-test/blob/f10bc30de876f82e8f74383b27a837b234152777/src/main/java/boojongmin/localsearch/controller/LocalSearchController.java#L26)
-  - [Service](https://github.com/boojm/local-search-test/blob/f10bc30de876f82e8f74383b27a837b234152777/src/main/java/boojongmin/localsearch/service/LocalSearchService.java#L41)
+  - [Controller](https://github.com/boojm/local-search-test/blob/50a6cebcc72140a85ea8450f1b32efc5d907a5df/src/main/java/boojongmin/localsearch/controller/LocalSearchController.java#L27)
+  - [Service](https://github.com/boojm/local-search-test/blob/50a6cebcc72140a85ea8450f1b32efc5d907a5df/src/main/java/boojongmin/localsearch/service/LocalSearchService.java#L45)
 1. 검색된 장소의 상세조회
   - 클라이언트측에서 구현. api로부터 받은 documents를 메모리에 저장후 테이블의 row를 클릭하면 상세정보 볼 수 있게 적용
 1. 인기검색어 목록
   - 레디스에 SortedSet(ZSETs)을 이용하여 구현
-  - [Service](https://github.com/boojm/local-search-test/blob/f10bc30de876f82e8f74383b27a837b234152777/src/main/java/boojongmin/localsearch/service/LocalSearchService.java#L62)
+  - [Service](https://github.com/boojm/local-search-test/blob/50a6cebcc72140a85ea8450f1b32efc5d907a5df/src/main/java/boojongmin/localsearch/service/LocalSearchService.java#L66)
   
 비즈니스 로직은 최대한 서버에서 구현합니다.
 -> 가능한 서버에서 구현.
@@ -40,7 +40,7 @@
 - JPA 사용
   - spring-data-jpa를 이용하여 entity 및 repository를 작성.
   - [Entity](https://github.com/boojm/local-search-test/blob/master/src/main/java/boojongmin/localsearch/domain/Member.java)
-  - [Repository](https://github.com/boojm/local-search-test/blob/master/src/main/java/boojongmin/localsearch/repository/MemberRepository.java)
+  - [Repository](https://github.com/boojm/local-search-test/blob/50a6cebcc72140a85ea8450f1b32efc5d907a5df/src/main/java/boojongmin/localsearch/repository/MemberRepository.java)
 
 ## 사용한 라이브러리
 #### server
